@@ -1,8 +1,13 @@
-/* ===== ESTILO GERAL ===== */
-body {
-  font-family: Arial, sans-serif;
+
+htlm, body{
+  height: 100%;
   margin: 0;
-  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
   background-color: #d3d3d3;
 }
 header {
@@ -13,6 +18,9 @@ header {
   background-color: black;
   color: white;
   padding: 20px;
+}
+header .logo{
+  background-image: url(loja/logozmgrifes-removebg-preview.png);
 }
 .titulo {
   display: flex;
@@ -101,7 +109,7 @@ h2{
 }
 
 /* título inicial invisível */
-.card h3 {
+.card +h3 {
   opacity: 0;               /* começa invisível */
   transition: opacity 0.4s ease;
   margin-top: 30px;
@@ -117,6 +125,7 @@ h2{
   border: none;
 }
 main {
+  flex: 1;
   width: 97%;
   max-width: 1500px;
   margin: 20px auto;
@@ -161,10 +170,13 @@ main {
 footer {
   background-color: black;
   color: white;
-  text-align:right;
-  padding-top: 25px;
-  padding-right: 5px;
-   font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 12px;
 }
 
 
